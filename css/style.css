@@ -1,5 +1,6 @@
 .fc-container{
   height: 100vh;
+  background-color:powderblue;
 }
 
 .fc-container-box{
@@ -40,25 +41,29 @@
   font-size: 13px;
 }
 
-
-
 .box-right img{
   height: 100%;
+  width: 100%;
 }
 
 .box-right{
   position: relative;
   width: 15%;
   height: 500px;
-  background-color: coral;
-  overflow: hidden;
 }
 
 .box-mini{
   height: 100px;
   width: 100%;
-  border: 2px solid white;
+  filter: brightness(50%);
 }
+
+.box-mini.active{
+  border: 2px solid white;
+  filter: brightness(100%);
+}
+
+
 
 .fc-prev, .fc-next{
   position: absolute;
