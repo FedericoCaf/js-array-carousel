@@ -9,6 +9,7 @@
 }
 
 .box-left{
+  position: relative;
   width: 85%;
 }
 
@@ -29,12 +30,28 @@
   width: 100%;
 }
 
-.fc-item .text-area{
+.text-area{
   position: absolute;
   color: white;
   bottom: 0;
   right: 5px;
   text-align: right;
+  z-index: 999;
+}
+
+.title-item{
+  display: none;
+}
+
+.title-item.active{
+  display: block;
+}
+.news-item{
+  display: none;
+}
+
+.news-item.active{
+  display: block;
 }
 
 .text-area p{
@@ -52,18 +69,16 @@
   height: 500px;
 }
 
-.box-mini{
+.item-mini{
   height: 100px;
   width: 100%;
   filter: brightness(50%);
 }
 
-.box-mini.active{
+.item-mini.active{
   border: 2px solid white;
   filter: brightness(100%);
 }
-
-
 
 .fc-prev, .fc-next{
   position: absolute;
@@ -74,7 +89,7 @@
   font-size: 20px;
   line-height: 20px;
   text-align: center;
-  background-color: white;
+  background-color:rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
   z-index: 999;
@@ -86,4 +101,8 @@
 
 .fc-next{
   bottom: 5px;
+}
+
+.fc-prev:hover, .fc-next:hover{
+  background-color: white;
 }
