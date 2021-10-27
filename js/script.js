@@ -12,8 +12,9 @@ const text = [
 
 const boxLeft = document.querySelector('.box-left');
 const boxRight = document.querySelector('.box-right');
-const textArea = document.querySelector('.text-area')
+const textArea = document.querySelector('.text-area');
 let contatore = 0;
+
 
 for(let i=0; i<fotoArray.length; i++){
 
@@ -50,6 +51,8 @@ for(let i=0; i<fotoArray.length; i++){
 
 const items = document.getElementsByClassName('fc-item');
 const boxMini = document.getElementsByClassName('item-mini');
+const titleItem = document.getElementsByClassName('title-item');
+const newsItem = document.getElementsByClassName('news-item');
 
 
 // console.log(items);
@@ -61,12 +64,17 @@ const next = document.querySelector('.fc-next');
 prev.addEventListener('click', function(){
  items[contatore].classList.remove('active');
  boxMini[contatore].classList.remove('active');
+ titleItem[contatore].classList.remove('active');
+ newsItem[contatore].classList.remove('active');
+
 
  contatore = contatore - 1;
  if(contatore < 0) contatore = items.length - 1;
 
  items[contatore].classList.add('active');
  boxMini[contatore].classList.add('active');
+ titleItem[contatore].classList.add('active');
+ newsItem[contatore].classList.add('active');
 //  console.log(items);
 //  console.log(boxMini);
  
@@ -75,12 +83,16 @@ prev.addEventListener('click', function(){
 next.addEventListener('click', function(){
   items[contatore].classList.remove('active');
   boxMini[contatore].classList.remove('active');
+  titleItem[contatore].classList.remove('active');
+  newsItem[contatore].classList.remove('active');
  
   contatore = contatore + 1;
   if(contatore > (items.length - 1)) contatore = 0;
  
   items[contatore].classList.add('active');
   boxMini[contatore].classList.add('active');
+  titleItem[contatore].classList.add('active');
+  newsItem[contatore].classList.add('active');
   // console.log(items);
   
  })
